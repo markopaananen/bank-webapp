@@ -4,119 +4,19 @@
     <meta charset="UTF-8">
     <title>Ecode test</title>
     <link rel="stylesheet" href="mycss.css">
+    <script src="bankapp-scripts.js"></script>
+
 </head>
 
 <body>
-<!--<p style="color: red">Hello 3K00d1!</p>-->
 <p class="bank-warning">Hello 3K00d1!</p>
 <p class="intro">Ensimmäinen testikappale.</p>
 <p>Toinen testikappale.</p>
 
 Leipätekstiä leipätekstin perään bodyyn hakattuna... kunnes kuvaan tulee JS.
-<script>
 
-    var bankapp = {};
-    //console.log('Hello Bank-webapp!');//
-
-    var name;
-    var anothername = 'Roope Ankka';
-    var randomName = 'Touho Serkku';
-    name = 'Milla Magia';
-
-    console.log(name + ' ja ' + anothername);
-
-    var kanta = 3;
-    var korkeus = 4;
-
-    console.log((kanta * korkeus)/2);
-    console.info(name);
-
-    /*var user = {
-
-        firsName: 'Hessu',
-        lastName:  'Hopo'
-    };*/
-    bankapp.user = {
-
-        firsName: 'Hessu',
-        lastName:  'Hopo'
-    };
-    console.log(user);
-
-    bankapp.userList = [1,2,3,4,5,'Kille kalevi', name];
-    console.log(userList);
-
-    userList.push(anothername);
-    console.log(userList);
-
-/*
-    function addUserToList(user) {
-        userList.push(user);
-    }
-*/
-    bankapp.addUserToList = function(user) {
-        bankapp.userList.push(user);
-    };
-
-
-    bankapp.doSomething = function () {
-        console.log('doSomething');
-    };
-
-/*    var testFunction = function (functionToCall) {
-        functionToCall();
-        console.log('testFunction');
-
-        (function doSomethingElse() {
-            console.log('doSomethingElse');
-        })();
-        //doSomethingElse();//
-    };*/
-/*
-    function doSomethingElse() {
-        console.log('doSomethingElse');
-    }
-    doSomethingElse();
-*/
-    bankapp.testFunction = function (functionToCall) {
-        functionToCall();
-        console.log('testFunction');
-
-        (function doSomethingElse() {
-            console.log('doSomethingElse');
-        })();
-        //doSomethingElse();//
-    };
-
-
-      bankapp.createUser = function () {
-        //return 'Knikke Knakkerton';//
-        return {
-            firstName: 'Putte',
-            lastName: 'Possu'
-        };
-    };
-
-    bankapp.addUserToList(bankapp.user);
-    bankapp.testFunction(bankapp.doSomething);
-    console.log(bankapp.userList);
-
-    var userCreated = bankapp.createUser();
-    console.log(userCreated);
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-
-
+<input id="firstName" type="text" value="Kroisos"/><p/>
+<input id="lastName" type="text" value="Pennonen"/><p/>
+<button onclick="bankapp.ui.addUser()">Lisää</button>
 </body>
 </html>
